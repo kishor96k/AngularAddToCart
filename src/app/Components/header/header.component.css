@@ -1,0 +1,23 @@
+.searchinput{
+    width: 600px;
+    margin-left: 200px;
+    border-radius: 3px;
+}
+
+.f-32{
+    font-size: 32px;
+}
+
+.f-30{
+    font-size: 30px;
+}
+.f-25{
+    font-size:25px;
+}
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right: 39%;
+    top: 20px;
+    color: black;
+}

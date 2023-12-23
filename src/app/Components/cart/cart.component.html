@@ -1,0 +1,60 @@
+<ng-container *ngIf="products.length==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="../../../assets/addcart.png" alt="">
+            <h6>Your Card is Empty!!!</h6>
+            <h4>Add items to your cart now</h4>
+            <button class="btn btn-primary" routerLink="/products">Add Items</button>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="products.length!=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Prouct Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products,let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <td>
+                                <img [src]="item.image" alt="" class="cardimg">
+                            </td>
+                            <td class="w-25">{{item.description}}</td>
+                            <td class="w-10">{{item.price}}</td>
+                            <td class="w-10">{{item.quantity}}</td>
+                            <td class="w-10">{{item.total}}</td>
+                            <td>
+                                <span class="text-danger cursor-pointer" (click)="removeItem(item)">
+                                    <i class="fa fa-trash-o"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button class="btn btn-success" (click)="emptyCart()">Empty</button></td>
+                            <td><button class="btn btn-warning" routerLink="/products">Show More</button></td>
+                            <td><button class="btn btn-secondary ">Checkout</button></td>
+                            <td><strong>GrandTotal=>{{grandTotal}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>

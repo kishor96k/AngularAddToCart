@@ -1,0 +1,52 @@
+.card-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #ffff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+}
+
+.item img{
+    width: 65px;
+}
+
+.item{
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.item a{
+    text-decoration: none;
+    color: black;
+}
+
+.item a:hover{
+    color:blue;
+}
+
+.prodtitle{
+    max-width: 100ch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.prodimg{
+    padding: 20px;
+    margin: 50px;
+}
+
+.prodimg img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.prodimg img:hover{
+    transition: 0.3s ease-in-out;
+    transform:scale(1.1);
+}
